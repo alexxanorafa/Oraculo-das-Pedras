@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oráculo das Pedras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="https://alexxanorafa.github.io/Tempo_e_Sonhos/" class="menu-item">Tempo e Sonhos</a>
+        <a href="https://alexxanorafa.github.io/posicionamentodosastros/" class="menu-item">Mapa Astral</a>
+        <a href="https://alexxanorafa.github.io/Aneis_da_Sabedoria/" class="menu-item">Anéis da Sabedoria</a>
+        <a href="https://alexxanorafa.github.io/TarodeMarselha/" class="menu-item">Tarô de Marselha</a>
+        <a href="https://alexxanorafa.github.io/Runas-do-Destino/" class="menu-item">Runas do Destino</a>
+        <a href="https://alexxanorafa.github.io/O-Construtor-do-Destino/" class="menu-item">O Construtor do Destino</a>
+        <a href="https://alexxanorafa.github.io/Tabuleiro-Quantico/" class="menu-item">Tabuleiro Quantico</a>
+    </nav>
+
+    <h1>Oráculo das Pedras Ancestrais</h1>
+
+    <div class="controls">
+        <select id="stone-select">
+            <option value="random">Pedra Aleatória</option>
+            <option value="Ametista">Ametista</option>
+            <option value="Quartzo Rosa">Quartzo Rosa</option>
+            <option value="Ônix">Ônix</option>
+            <option value="Jade">Jade</option>
+            <option value="Turquesa">Turquesa</option>
+        </select>
+        <button onclick="revealStone()">Revelar Sabedoria</button>
+    </div>
+
+    <div class="stone-container">
+        <div class="stone-card" id="stone-display">
+            <div class="stone-visual" id="stone-color"></div>
+            <div class="stone-info">
+                <h2 id="stone-name"></h2>
+                <div id="cultures"></div>
+                <div class="meta-info">
+                    <p>Chakra: <span id="chakra"></span></p>
+                    <p>Elemento: <span id="element"></span></p>
+                </div>
+                <div class="keywords" id="keywords"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

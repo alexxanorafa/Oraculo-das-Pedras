@@ -1,0 +1,177 @@
+body {
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+
+h2 {
+  color: #d4b192;
+  font-size: 2.0em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #2c3e50;
+}
+
+/* Estilo do menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  width: 100%;
+  background: transparent; /* Remove o fundo específico */
+  box-shadow: transparent; /* Remove o box-shadow */
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-item {
+  background-color: transparent;
+  border-radius: 4px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 0.9em;
+  font-weight: 250;
+  padding: 0 8px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 2px transparent;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #2c3e50;
+  color: #d4b192;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #d4b192;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .menu-item {
+      height: 25px; /* Reduz altura */
+      font-size: 0.8em; /* Fonte menor */
+      padding: 0 6px; /* Padding reduzido */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-list {
+      flex-direction: row; /* Empilha os itens */
+      gap: 2px; /* Espaçamento menor */
+  }
+
+  .menu-item {
+      height: 20px; /* Altura mais compacta */
+      font-size: 0.55em; /* Fonte menor */
+      padding: 0 3px; /* Padding ainda menor */
+  }
+}
+
+.controls {
+    margin-bottom: 30px;
+}
+
+select, button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background: #fff;
+    color: #2c3e50;
+    border: 1px solid #d4b192;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.stone-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stone-card {
+    display: none;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.stone-visual {
+    height: 150px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.stone-info {
+    text-align: left;
+    padding: 10px;
+}
+
+.culture-meaning {
+    margin: 10px 0;
+    padding: 8px;
+    background: rgba(44, 62, 80, 0.05);
+    border-radius: 5px;
+}
+
+.keywords {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.keyword {
+    background: #d4b192;
+    color: #2c3e50;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+.meta-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
